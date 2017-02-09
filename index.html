@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Useless Fact Generator</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="Description" content="Useless facts. That's pretty much it.">
+		<link href="flatui.css" rel="stylesheet">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="facts.js"> </script>
+
+	<style type="text/css">
+
+		.fact {
+    		max-width: 1000px;
+    		word-wrap: break-word;
+    		text-align: center;
+    		font-style: italic;
+    		position: absolute;
+			margin-left: auto;
+			margin-right: auto;
+			left: 0;
+			right: 0;
+		}
+
+	</style>
+	</head>
+	<body>
+
+		<!-- RANDOM FACT GENERATOR -->
+			<script type="text/javascript">
+				function factMain() {
+					$(".fact").fadeIn();
+					$(".fact").html(misc[line]);
+					line = line + 1;
+
+					if (line == 62) {
+						line = 0;
+					}
+				}
+			</script>
+		<script type="text/javascript">
+			$(function() {
+				$("#science").click(function() {
+					alert("ooh");
+				});
+			});
+			
+		</script>
+
+		<!-- Title And Fact-->
+		<center>
+			<br style="line-height: 50px">
+			<div>
+				<h1>Useless Fact Generator</h1> <br>
+
+				<h4 class="fact"> &nbsp; </h4>
+			</div>
+
+		<!-- Main Button -->
+			<br style="line-height: 400px">
+				<button onclick="factMain()" class="btn btn-embossed btn-primary" 
+					style="font-size: 48px; position: absolute; right: 46%; top: 70%">
+		  				<b>Fact!</b>
+				</button> <br>
+		</center>
+		<div style="position: relative; top: 310px">
+			<h7> © Mikael Stenman, 2016. <a href="https://m1ksu.ml/">m1ksu.ml</a></h7> 
+		</div>
+	</body>	
+</html>
